@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1059973126EB4058C43347FB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222DBDA71AB7231729C9AA1 /* RootView.swift */; };
+		1E6BBE4FBB4E8DF394FB3040 /* DiscoveredPeripheralSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5CAF1326ABE93D36487E5 /* DiscoveredPeripheralSummary.swift */; };
+		28203ECDB7755EE12DCDC73C /* ScanPlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D40C16F212E6AA548E6795 /* ScanPlaceholderViewModel.swift */; };
+		3BED6975AD79372E2085E1B8 /* BlueSpecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B12B7E7D9193267FAA710 /* BlueSpecApp.swift */; };
+		70E7DFF58936E1F7556B2038 /* ScanPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4483D7A42A9AC760F3912188 /* ScanPlaceholderView.swift */; };
+		7C5F8AF02E049D722DABECBE /* BluetoothScanningStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41270D4DD68DF151B8DAAB /* BluetoothScanningStateTests.swift */; };
+		A5AA61B1669F14925352E614 /* BluetoothScanningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6308D588C37C23D8B2ABE8 /* BluetoothScanningState.swift */; };
+		AA855E94CC6671DAC5632734 /* MockBluetoothScannerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8373BFF432F112B49BF0F97 /* MockBluetoothScannerAdapter.swift */; };
+		BEE84FA57D3B31F871290B45 /* BluetoothScannerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF896067A7BFD4879B8BDC /* BluetoothScannerAdapter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F14A5496A22CC493BFAAF2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA40C29F1D7A734B9DDF2EC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00A3E309DA302BF7321B5854;
+			remoteInfo = BlueSpec;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06B5CAF1326ABE93D36487E5 /* DiscoveredPeripheralSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredPeripheralSummary.swift; sourceTree = "<group>"; };
+		0E8B12B7E7D9193267FAA710 /* BlueSpecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSpecApp.swift; sourceTree = "<group>"; };
+		3222DBDA71AB7231729C9AA1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4483D7A42A9AC760F3912188 /* ScanPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPlaceholderView.swift; sourceTree = "<group>"; };
+		5B41270D4DD68DF151B8DAAB /* BluetoothScanningStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScanningStateTests.swift; sourceTree = "<group>"; };
+		64F42F358114DFD99B6B5B40 /* BlueSpecTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BlueSpecTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BFCC8CDF0345EAEAEA5009 /* BlueSpec.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BlueSpec.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CF896067A7BFD4879B8BDC /* BluetoothScannerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScannerAdapter.swift; sourceTree = "<group>"; };
+		DE6308D588C37C23D8B2ABE8 /* BluetoothScanningState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothScanningState.swift; sourceTree = "<group>"; };
+		E8373BFF432F112B49BF0F97 /* MockBluetoothScannerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBluetoothScannerAdapter.swift; sourceTree = "<group>"; };
+		E9D40C16F212E6AA548E6795 /* ScanPlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPlaceholderViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		35839EFE8888EB11AA7B2765 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				06B5CAF1326ABE93D36487E5 /* DiscoveredPeripheralSummary.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		44E525685FA961386BCE4CE9 = {
+			isa = PBXGroup;
+			children = (
+				7BB46D9F865F3950D919DB54 /* BlueSpec */,
+				6927629FF8351C3C868792D0 /* BlueSpecTests */,
+				CD9034AFD7CCBEF7963BAEB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D527266C90328DF4E3656A3 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				4483D7A42A9AC760F3912188 /* ScanPlaceholderView.swift */,
+				E9D40C16F212E6AA548E6795 /* ScanPlaceholderViewModel.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		54BED0413BF1A31E3F5A7BC1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				35839EFE8888EB11AA7B2765 /* Entities */,
+				F6EC492148EE5F39D26B36B7 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5929210398A3A6297E695D32 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3222DBDA71AB7231729C9AA1 /* RootView.swift */,
+				4D527266C90328DF4E3656A3 /* Scan */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6927629FF8351C3C868792D0 /* BlueSpecTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B41270D4DD68DF151B8DAAB /* BluetoothScanningStateTests.swift */,
+			);
+			path = BlueSpecTests;
+			sourceTree = "<group>";
+		};
+		7BB46D9F865F3950D919DB54 /* BlueSpec */ = {
+			isa = PBXGroup;
+			children = (
+				8A6A6A716816ECB14E1473C6 /* App */,
+				54BED0413BF1A31E3F5A7BC1 /* Domain */,
+				B206CB2F4204AA0C3E2995DC /* Infrastructure */,
+				5929210398A3A6297E695D32 /* UI */,
+			);
+			path = BlueSpec;
+			sourceTree = "<group>";
+		};
+		8A6A6A716816ECB14E1473C6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0E8B12B7E7D9193267FAA710 /* BlueSpecApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B206CB2F4204AA0C3E2995DC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CB10648AE1951C95940AFC9E /* Bluetooth */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CB10648AE1951C95940AFC9E /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				E8373BFF432F112B49BF0F97 /* MockBluetoothScannerAdapter.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		CD9034AFD7CCBEF7963BAEB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5BFCC8CDF0345EAEAEA5009 /* BlueSpec.app */,
+				64F42F358114DFD99B6B5B40 /* BlueSpecTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6EC492148EE5F39D26B36B7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C7CF896067A7BFD4879B8BDC /* BluetoothScannerAdapter.swift */,
+				DE6308D588C37C23D8B2ABE8 /* BluetoothScanningState.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00A3E309DA302BF7321B5854 /* BlueSpec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ED6A0ACDCB3A0800EF551FB /* Build configuration list for PBXNativeTarget "BlueSpec" */;
+			buildPhases = (
+				21D671EE2316C250CF239784 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueSpec;
+			packageProductDependencies = (
+			);
+			productName = BlueSpec;
+			productReference = A5BFCC8CDF0345EAEAEA5009 /* BlueSpec.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDCADDEE002068FC1B58DD75 /* BlueSpecTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E64E9005DD92E10B2DE1EF /* Build configuration list for PBXNativeTarget "BlueSpecTests" */;
+			buildPhases = (
+				83FEC35F8E16C37AF649B804 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C553C3463D97925228FC4920 /* PBXTargetDependency */,
+			);
+			name = BlueSpecTests;
+			packageProductDependencies = (
+			);
+			productName = BlueSpecTests;
+			productReference = 64F42F358114DFD99B6B5B40 /* BlueSpecTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA40C29F1D7A734B9DDF2EC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = DE2CF6D5926642CE5D88A407 /* Build configuration list for PBXProject "BlueSpec" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 44E525685FA961386BCE4CE9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CD9034AFD7CCBEF7963BAEB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00A3E309DA302BF7321B5854 /* BlueSpec */,
+				BDCADDEE002068FC1B58DD75 /* BlueSpecTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21D671EE2316C250CF239784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BED6975AD79372E2085E1B8 /* BlueSpecApp.swift in Sources */,
+				BEE84FA57D3B31F871290B45 /* BluetoothScannerAdapter.swift in Sources */,
+				A5AA61B1669F14925352E614 /* BluetoothScanningState.swift in Sources */,
+				1E6BBE4FBB4E8DF394FB3040 /* DiscoveredPeripheralSummary.swift in Sources */,
+				AA855E94CC6671DAC5632734 /* MockBluetoothScannerAdapter.swift in Sources */,
+				1059973126EB4058C43347FB /* RootView.swift in Sources */,
+				70E7DFF58936E1F7556B2038 /* ScanPlaceholderView.swift in Sources */,
+				28203ECDB7755EE12DCDC73C /* ScanPlaceholderViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FEC35F8E16C37AF649B804 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5F8AF02E049D722DABECBE /* BluetoothScanningStateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C553C3463D97925228FC4920 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00A3E309DA302BF7321B5854 /* BlueSpec */;
+			targetProxy = F14A5496A22CC493BFAAF2E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05B5CE6811C33D75D68D1749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolpeng.BlueSpecTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueSpec.app/BlueSpec";
+			};
+			name = Release;
+		};
+		0E18422EB0DD3C128BBB94E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BlueSpec;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolpeng.BlueSpec;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		396A5E2D78799D56AE0F2586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BlueSpec;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolpeng.BlueSpec;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		851621D9AB881C634DEB18A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.coolpeng.BlueSpecTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueSpec.app/BlueSpec";
+			};
+			name = Debug;
+		};
+		8CA1F8ED2B141B15FAB659AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		D11B4E770676F147F9735408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ED6A0ACDCB3A0800EF551FB /* Build configuration list for PBXNativeTarget "BlueSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E18422EB0DD3C128BBB94E6 /* Debug */,
+				396A5E2D78799D56AE0F2586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A2E64E9005DD92E10B2DE1EF /* Build configuration list for PBXNativeTarget "BlueSpecTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851621D9AB881C634DEB18A7 /* Debug */,
+				05B5CE6811C33D75D68D1749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE2CF6D5926642CE5D88A407 /* Build configuration list for PBXProject "BlueSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA1F8ED2B141B15FAB659AC /* Debug */,
+				D11B4E770676F147F9735408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA40C29F1D7A734B9DDF2EC1 /* Project object */;
+}
