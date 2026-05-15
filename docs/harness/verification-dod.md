@@ -1,8 +1,8 @@
 # DoD 验证规范 — BlueSpec
 
-**版本：** v1.1  
+**版本：** v1.2  
 **生效日期：** 2026-05-12  
-**最后更新：** 2026-05-13  
+**最后更新：** 2026-05-15  
 **权威来源：** `openspec/project.md`「TDD 与验证门禁」
 
 ---
@@ -59,7 +59,7 @@ iOS Simulator 可用于 GUI、导航、布局、空状态、错误态、mock 数
 iOS 工程创建后，默认构建命令为：
 
 ```bash
-xcodebuild build -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhone 16'
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild build -project ios/BlueSpec.xcodeproj -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhone 17'
 ```
 
 通过标准：
@@ -67,7 +67,7 @@ xcodebuild build -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPho
 - 无编译错误
 - 无新增编译警告
 
-如果 scheme、destination 或 workspace 名称变化，必须在对应 change 的 `design.md` 或 PR 描述中说明实际命令。
+如果 scheme、project/workspace 路径、Xcode 路径或可用 Simulator destination 变化，必须在对应 change 的 `design.md`、`tasks.md` 或 PR 描述中说明实际命令。
 
 ---
 
@@ -76,7 +76,7 @@ xcodebuild build -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPho
 iOS 工程创建后，默认测试命令为：
 
 ```bash
-xcodebuild test -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhone 16'
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild test -project ios/BlueSpec.xcodeproj -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhone 17'
 ```
 
 通过标准：
@@ -102,6 +102,32 @@ xcodebuild test -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhon
 | 权限处理 | iPhone 真机 | 蓝牙权限拒绝或蓝牙关闭 → 显示可理解状态和恢复指引 |
 
 模拟器验证可以作为 UI 辅助证据，但不能替代真机 BLE smoke test。
+
+### Simulator UI Smoke 执行策略
+
+默认采用命令行驱动的 Simulator UI smoke test，以便验证过程可重复、可记录，并尽量不打断本机前台工作。默认流程为：
+
+```bash
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl boot '<simulator name>'
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl install booted '<path-to-app>'
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl launch booted '<bundle-id>'
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl io booted screenshot '<evidence-path>.png'
+```
+
+通过标准：
+- app 能安装并启动
+- 截图中关键首屏、状态文案和主要控件可见
+- 页面无明显重叠、截断或不可访问控件
+- 对于不包含真实 BLE 的 change，不出现蓝牙权限弹窗
+
+默认不打开 Xcode GUI，也不强制将 Simulator.app 带到前台。以下场景才需要显式执行 `open -a Simulator`，并进行可见窗口走查：
+
+- Stakeholder 明确要求肉眼查看页面
+- 视觉评审、交互走查或 Figma 对稿
+- 截图证据不足以判断布局、动画、手势或状态变化
+- 需要人工操作系统弹窗、权限设置或复杂导航路径
+
+Xcode GUI 默认不作为验证入口。只有在需要调试 scheme、断点、日志、签名或项目配置时，才打开 Xcode。
 
 ---
 
@@ -169,5 +195,6 @@ xcodebuild test -scheme BlueSpec -destination 'platform=iOS Simulator,name=iPhon
 
 | 版本 | 日期 | 变更内容 |
 |------|------|----------|
+| v1.2 | 2026-05-15 | 将默认构建/测试命令更新为当前 `ios/BlueSpec.xcodeproj` 路径和实际可用的 iPhone 17 Simulator；补充 Simulator UI smoke 默认采用命令行安装、启动、截图验证，明确仅在视觉评审、交互走查、Figma 对稿或 Stakeholder 要求时打开 Simulator 图形窗口；说明 Xcode GUI 默认不作为验证入口 |
 | v1.1 | 2026-05-13 | 明确 iOS Simulator 与 iPhone 真机验证边界；规定 CoreBluetooth 硬件路径必须使用 iPhone 真机和 BLE 外设验证；完成报告新增 simulator UI smoke test、iPhone BLE smoke test 和 BLE test device |
 | v1.0 | 2026-05-12 | 初始版本；建立 DoD 四步骤、iOS 专项检查清单和完成报告格式 |
