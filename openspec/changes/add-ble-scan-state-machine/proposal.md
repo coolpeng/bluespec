@@ -1,7 +1,7 @@
 # Proposal: add-ble-scan-state-machine
 
 ## 状态
-**Proposal 阶段，待 Stakeholder 审批后进入 Apply。**
+**已批准，进入 Apply 阶段。**
 
 ## 背景
 BlueSpec 已完成最小 iOS App Shell，并建立了 UI / Domain / Infrastructure 分层。当前扫描页仍是静态 mock 占位，尚未具备可测试的 BLE 扫描状态机，也没有稳定的 UI 状态映射。
@@ -72,6 +72,6 @@ UI 覆盖：
 
 ## 审批记录
 
-- Stakeholder：待确认
-- 日期：待确认
-- 结论：待确认
+- Stakeholder：用户
+- 日期：2026-05-22
+- 结论：批准进入 Apply
